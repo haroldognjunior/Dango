@@ -2,22 +2,22 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Loader from '../loader/Loader';
-import Img from '../../fragments/image/Image';
-import { MathNumber } from '../../fragments/math/MathNumber';
+import Img from 'fragments/image/Image';
+import { MathNumber } from 'fragments/math/MathNumber';
 import {
   productList,
   productCart,
   editProduct,
   quantityProduct
-} from '../../app/state/actions/productsReducers';
+} from '../../redux/state/actions/productsReducers';
 import Swal from 'sweetalert2';
 import {
   FontSizeChange,
   FontSizeDecrease,
   FontSizeIncrease
 } from '../../fragments/fontSizeChange/FontSizeChange';
-import { FontIconDecrease } from './FontIconDecrease';
-import { FontIconIncrease } from './FontIconIncrease';
+import { FontIconDecrease } from '../../asset/icons/FontIconDecrease';
+import { FontIconIncrease } from '../../asset/icons/FontIconIncrease';
 
 const ProductsList: React.FC = () => {
   const ProductsData = useSelector((state: any) => state?.products?.products);
@@ -60,11 +60,11 @@ const ProductsList: React.FC = () => {
           <Loader />
         </>
       ) : (
-        <div className='px-8 grid grid-cols-1 my-4 sm:grid-cols-2 sm:my-8 lg:grid-cols-4 lg:my-16 gap-4 justify-center justify-items-center'>
+        <div className='px-4 sm:px-8 grid grid-cols-1 my-4 sm:grid-cols-2 sm:my-8 lg:grid-cols-4 lg:my-16 gap-4 justify-center justify-items-center'>
           {ProductsData.map((individualProductData: any) => {
             return (
               <div
-                className='my-2 p-5 border-solid border-2 border-black w-60 xl:w-72'
+                className='my-2 p-5 border-solid border-2 border-black sm:w-60 xl:w-72'
                 key={individualProductData.id}
               >
                 <div className='m-auto flex justify-center min-h-img-card '>

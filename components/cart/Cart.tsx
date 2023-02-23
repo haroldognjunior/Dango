@@ -14,15 +14,15 @@ import {
   CheckOutTotal
 } from '../../styles/styles';
 import { useSelector, useDispatch } from 'react-redux';
-import { CloseIcon } from './CloseIcon';
-import { MathNumber } from '../../fragments/math/MathNumber';
-import Img from '../../fragments/image/Image';
-import { SpacingIcon } from './SpacingIcon';
-import { Bye, Delete, Reduce } from '../../fragments/reduce/Reduce';
+import { CloseIcon } from 'icons/CloseIcon';
+import { MathNumber } from 'fragments/math/MathNumber';
+import Img from 'fragments/image/Image';
+import { SpacingIcon } from 'icons/SpacingIcon';
+import { Bye, Delete, Reduce } from 'fragments/reduce/Reduce';
 import {
   lessProductCart,
   moreProductCart
-} from '../../app/state/actions/productsReducers';
+} from 'redux/state/actions/productsReducers';
 
 export function Cart(props: {
   isOpen: any;

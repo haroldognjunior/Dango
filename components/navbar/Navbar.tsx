@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { CartIcon } from './CartIcon';
+import { CartIcon } from 'icons/CartIcon';
 
 export function Navbar(props: { toggleMenu: any }) {
   const CartData = useSelector((state: any) => state?.products?.cart);

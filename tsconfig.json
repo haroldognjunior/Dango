@@ -19,9 +19,16 @@
     "baseUrl": ".",
     "paths": {
       "components/*": ["components/*"],
-      "app/*": ["app/*"]
-    }
+      "redux/*": ["redux/*"],
+      "icons/*": ["asset/icons/*"],
+      "fragments/*": ["fragments/*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"]
 }
