@@ -18,7 +18,8 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "components/*": ["components/*"]
+      "components/*": ["components/*"],
+      "app/*": ["app/*"]
     }
   },
   "exclude": ["node_modules"],

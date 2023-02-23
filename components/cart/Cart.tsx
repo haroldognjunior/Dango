@@ -12,17 +12,17 @@ import {
   CounterBox,
   CounterButton,
   CheckOutTotal
-} from '../../../styles';
+} from '../../styles/styles';
 import { useSelector, useDispatch } from 'react-redux';
 import { CloseIcon } from './CloseIcon';
-import { MathNumber } from '../tools/math/MathNumber';
-import Img from '../image/Image';
+import { MathNumber } from '../../fragments/math/MathNumber';
+import Img from '../../fragments/image/Image';
 import { SpacingIcon } from './SpacingIcon';
-import { Bye, Delete, Reduce } from '../tools/reduce/Reduce';
+import { Bye, Delete, Reduce } from '../../fragments/reduce/Reduce';
 import {
   lessProductCart,
   moreProductCart
-} from '../state/actions/productsReducers';
+} from '../../app/state/actions/productsReducers';
 
 export function Cart(props: {
   isOpen: any;

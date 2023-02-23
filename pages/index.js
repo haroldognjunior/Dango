@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Navbar } from '../styles/components/app/navbar/Navbar';
-import ProductsList from '../styles/components/app/products/Products';
-import { Main } from '../styles/styles';
-import { Cart } from '../styles/components/app/cart/Cart';
+import { Navbar } from 'components/navbar/Navbar';
+import ProductsList from 'components/products/Products';
+import { Cart } from 'components/cart/Cart';
 import { useRouter } from 'next/router';
-import Seo from 'components/Seo';
-import Footer from 'components/Footer';
+import Seo from 'components/seo';
+import Footer from 'components/footer';
 
 export default function Home() {
   const [isOpen, setOpen] = useState(false);

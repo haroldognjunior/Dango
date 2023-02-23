@@ -2,20 +2,20 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Loader from '../loader/Loader';
-import Img from '../image/Image';
-import { MathNumber } from '../tools/math/MathNumber';
+import Img from '../../fragments/image/Image';
+import { MathNumber } from '../../fragments/math/MathNumber';
 import {
   productList,
   productCart,
   editProduct,
   quantityProduct
-} from '../state/actions/productsReducers';
+} from '../../app/state/actions/productsReducers';
 import Swal from 'sweetalert2';
 import {
   FontSizeChange,
   FontSizeDecrease,
   FontSizeIncrease
-} from '../tools/fontSizeChange/FontSizeChange';
+} from '../../fragments/fontSizeChange/FontSizeChange';
 import { FontIconDecrease } from './FontIconDecrease';
 import { FontIconIncrease } from './FontIconIncrease';
 
