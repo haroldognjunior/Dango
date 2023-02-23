@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Montserrat 600';
+  src: url('./fonts/Montserrat-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./fonts/Montserrat-Thin.ttf');
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0 auto;
+  font-family: 'Montserrat 600', sans-serif;
+}
