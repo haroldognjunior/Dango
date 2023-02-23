@@ -11,11 +11,18 @@ import {
   quantityProduct
 } from '../state/actions/productsReducers';
 import Swal from 'sweetalert2';
+import {
+  FontSizeChange,
+  FontSizeDecrease,
+  FontSizeIncrease
+} from '../tools/fontSizeChange/FontSizeChange';
+import { FontIconDecrease } from './FontIconDecrease';
+import { FontIconIncrease } from './FontIconIncrease';
 
 const ProductsList: React.FC = () => {
   const ProductsData = useSelector((state: any) => state?.products?.products);
   const dispatch = useDispatch();
-  const [firstName, setFirstName] = useState('');
+  const [fontSize, setFontSize] = useState(16);
 
   const fetchProducts = async () => {
     await axios.get('/db/products.json').then((res) => {
@@ -27,8 +34,27 @@ const ProductsList: React.FC = () => {
     fetchProducts();
   }, []);
 
+  useEffect(() => {
+    FontSizeChange(fontSize);
+  }, [fontSize]);
+
   return (
     <>
+      <div className='flex m-10 w-20 justify-evenly'>
+        <div
+          className='w-5'
+          onClick={() => FontSizeDecrease(fontSize, setFontSize)}
+        >
+          <FontIconDecrease />
+        </div>
+        <div
+          className='w-5'
+          onClick={() => FontSizeIncrease(fontSize, setFontSize)}
+        >
+          <FontIconIncrease />
+        </div>
+      </div>
+
       {!ProductsData && ProductsData == undefined ? (
         <>
           <Loader />
@@ -48,7 +74,9 @@ const ProductsList: React.FC = () => {
                     height={118}
                   />
                 </div>
-                <h1 className='my-2'>{individualProductData.name}</h1>
+                <h1 className='my-2 product-title'>
+                  {individualProductData.name}
+                </h1>
                 <input
                   name='name'
                   className='my-1 max-w-s-s sm:max-w-s-xs lg:max-w-xs bg-transparent p-0.5'
@@ -94,7 +122,7 @@ const ProductsList: React.FC = () => {
                 <h3 className='text-xs font-thin text-gray-500 my-4'>
                   {individualProductData.description}
                 </h3>
-                <div className='flex justify-center	justify-items-center'>
+                <div className='flex justify-center	justify-items-center flex-col	items-center'>
                   <button
                     className='outline outline-offset-2 bg-rose-light p-1'
                     onClick={() =>
@@ -111,6 +139,7 @@ const ProductsList: React.FC = () => {
                   >
                     Add to cart
                   </button>
+                  <p className='my-4 underline decoration-solid'>Learn More</p>
                 </div>
               </div>
             );

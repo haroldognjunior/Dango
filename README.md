@@ -1,43 +1,40 @@
-Diretrizes do desafio
-===========================
+General instructions:
+There are 2 options to build the test in. You can select Option A or Option B, you do not need
+to carry out both tests. Choose the one you prefer.
+We will not provide a Figma file for this test, so please replicate the layout to the best of your
+ability, but do not worry about specific images/colors/font styles.
+When finished, please deliver the test files via email hi@dango.digital and
+pablo@dango.digital.
+Please don’t use bootstrap, use your own css or tailwind.
+We will review the test and provide feedback in 24hs.
+Section Reference:Option A
+HTML/CSS
 
-O objetivo principal desse teste é avaliar sua capacidade de escrever código limpo, bem testado e reutilizável. Ao terminar, faça o deploy da aplicação e mande-nos o link.
-
-Tarefa (funcional)
----------------
-
-Para esse desafio, você deve consumir nossa [API REST de produtos](https://mks-challenge-api-frontend.herokuapp.com/api-docs/) para exibir a lista de produtos da loja.
-
-A aplicação deve conter apenas uma página/rota e um carrinho.
-
-- <b>Loja</b>: A lista de produtos deve ser buscada de nossa API, use um shimmer/skeleton enquanto estiver em loading.
- 
-- <b>Carrinho</b>: O carrinho deve conter todos os produtos selecionados, juntamente com a opção de aumentar a quantidade de cada produto selecionado.
-
-Use do Jest e a testing-library para realizar os testes unitários.
-
-Recursos
----------------
-
-UI/UX: [Figma loja](https://www.figma.com/file/Z4z8osDbK1ET7cjNzFRMrK/MKS-Front-end-challenge?node-id=0%3A1) PS: O design system está incluso, incluindo a fonte.
-
-API: [API REST de produtos](https://mks-challenge-api-frontend.herokuapp.com/api-docs/) para exibir a lista de produtos da loja.
-
-Ferramentas requeridas
----------------
-
-1. TypeScript
-2. React ou Next.js (Preferimos Next.js)
-3. Redux toolkit
-4. Styled-components
-5. Jest
-
-Aspectos técnicos
----------------
-
-Todas as ferramentas listadas anteriormente são mandatórias, além delas sinta-se livre para utilizar de qualquer outra technologia que te seja confortável.
-
-Faça o deploy!
----------------
-
-Ao finalizar, faça o deploy no lugar que te for confortável (exemplo: Vercel, Netlify, Heroku, Amazon EC2, etc)
+-
+- Replicate the section above utilizing grid and flex, depending on what’s best for each
+  case and using 7 items in total: 4 on the first row and 3 on the second row (aligned
+  left).
+  Responsiveness: When necessary, add a breakpoint to switch to 2 or 1 items per
+  row.
+  JS
+-
+-
+- In a separate folder, duplicate the files and add buttons outside of the grid.
+  Choose option a or b for the buttons (you do not need to code both):
+- a) Make the buttons swap the colors and headlines of each product on click
+  and
+- b) Make the buttons remove or add items to the grid on click.
+  Use only Vanilla JS.
+  Option B
+  REACT
+-
+-
+-
+- Build the section above with React
+  Add an input field that can be used to edit the product titles (the titles should change
+  live while typing)
+  Add a range to edit the font-size of the product titles
+  Outside of the grid display the total sum of the product quantities that come from the
+  inputs in each of them.
+  Optional:
+- Use nextjs and deliver a URL with the published test
