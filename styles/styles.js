@@ -131,7 +131,7 @@ export const CounterBox = styled.div`
   & h3 {
     margin: 0;
     font-weight: 400;
-    font-size: 8px;
+    font-size: 12px;
   }
   & svg {
     margin: 0 4px 0 4px;
@@ -142,11 +142,11 @@ export const CounterButton = styled.div`
   font-family: 'Montserrat 300', sans-serif;
   font-weight: 400;
   & h5 {
-    font-size: 12px;
+    font-size: 20px;
     cursor: pointer;
   }
   & h6 {
-    font-size: 8px;
+    font-size: 16px;
     cursor: pointer;
   }
 `;
