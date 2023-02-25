@@ -3,8 +3,7 @@ There are 2 options to build the test in. You can select Option A or Option B, y
 to carry out both tests. Choose the one you prefer.
 We will not provide a Figma file for this test, so please replicate the layout to the best of your
 ability, but do not worry about specific images/colors/font styles.
-When finished, please deliver the test files via email hi@dango.digital and
-pablo@dango.digital.
+
 Please don’t use bootstrap, use your own css or tailwind.
 We will review the test and provide feedback in 24hs.
 Section Reference:Option A
